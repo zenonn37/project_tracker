@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectTracker</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="navbar">
+       <div class="navbar-inner">
+       <%=link_to("ProjectTracker",projects_path, class:"brand")%>
+       <ul class="nav">
+       	<li class="active"><%=link_to("Home",projects_path)%></li>
+       	  	<li><%=link_to("New","#")%></li>
+       	  	  	<li><%=link_to("Edit","#")%></li>
+       </ul>
+       </div>
+	 </div>
+
+<%= yield %>
+
+</body>
+</html>
