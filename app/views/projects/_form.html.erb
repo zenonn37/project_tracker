@@ -1,0 +1,14 @@
+
+<%= simple_form_for @project do |f|%>
+ <%= f.input :project_name%>
+ <%= f.input :project_type%>
+  <%= f.input :project_deploy%>
+  <%= f.input :project_sdk%>
+ <%= f.input :project_end%>
+  <%= f.input :project_languages%>
+  <%= f.input :project_frameworks%> 
+  <%= f.input :project_complete%>
+  <%= f.input :project_details%>
+ <%= f.button :submit, "Create project"%>
+
+<%end%>
