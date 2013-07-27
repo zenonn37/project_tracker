@@ -1,6 +1,10 @@
 ProjectTracker::Application.routes.draw do
   resources :projects
   root to: 'projects#index'
+
+  match '/new', to: 'projects#new'
+  match '/project', to: 'projects#project'
+  match '/edit', to: 'projects#edit'
   #get "projects/index"
 
   #get "projects/new"
