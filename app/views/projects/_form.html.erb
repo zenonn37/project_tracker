@@ -1,13 +1,44 @@
 
-<%= simple_form_for @project do |f|%>
+<%= simple_form_for @project,html:{class:"well"} do |f|%>
+<div class="row-fluid">
+  
+<div class="span2">
  <%= f.input :project_name%>
+
  <%= f.input :project_type%>
-  <%= f.input :project_deploy%>
+</div>
+
+<div class="span2">
+
+ <%= f.input :project_deploy%>
+
   <%= f.input :project_sdk%>
- <%= f.input :project_end%>
+
+ 
+ </div>
+
+</div>
+
+<div class="row-fluid">
+	<div class="span2">
   <%= f.input :project_languages%>
+
   <%= f.input :project_frameworks%> 
+</div>
+    <div class="span2">
+    	<%= f.input :project_end%>
+
    <%= f.input :project_details%>
- <%= f.button :submit, "Create project"%>
+
+
+ </div>
+</div>
+<div class="row-fluid">
+	<div class="span4">
+  <%= f.button :submit, "Create project"%>
+         </div>
+  </div>
+
+</div>
 
 <%end%>

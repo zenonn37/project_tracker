@@ -1,35 +1,38 @@
 <div class="row-fluid">
 
-	<div class="span8">
+	<div class="span4 well">
 
-		<h1 class="addTask"><%=link_to("+Add Project",new_path)%></h1>
+		<h1 class="addTask"><%=link_to("+ Add Project",new_path)%></h1>
 
-	</div>
-
-
-<div class="span4">
-
-	<h1></h1>
-
-
-</div>
-
-
-</div>
-
-<div class="row-fluid">
-<h2>Current Projects</h2>
-<div class="span8">
-	<%@project.each do |project|%>
+         <h2>Current Projects</h2>
+		<%@project.each do |project|%>
 <strong>Project Name:</strong><%=project.project_name%>
      
-        <p class="project_list"><strong>Project Type:</strong>Project Type:<%=project.project_type%></p>
+      
      
-         <p class="project_list"><strong>Project Posted: </strong><%=time_ago_in_words(project.created_at) + " ago"%></p>
+         <p class="project_list"><strong>Project Posted: </strong><%=link_to time_ago_in_words(project.created_at) + " ago",project%></p>
+         <p><%=link_to "Edit",edit_project_path(project)%> |
+         <%=link_to "Delete",project, method: :delete, data:{ confirm: "Are you sure?"}%></p>
+         
+
 
      <%end%>
 
 	</div>
 
+	<div class="span8">
+	
+             <h1>Project Information</h1>
+	</div>
+
+
+
+
+	
+
+
+
+
 
 </div>
+

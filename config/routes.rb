@@ -3,8 +3,9 @@ ProjectTracker::Application.routes.draw do
   root to: 'projects#index'
 
   match '/new', to: 'projects#new'
-  match '/project', to: 'projects#project'
+ 
   match '/edit', to: 'projects#edit'
+  match '/show', to: 'projects#show'
   #get "projects/index"
 
   #get "projects/new"
