@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   def index
-  	@project = Project.all
+  	@project = Project.sort
+      @active = Project.active
+    @checkActive = Check.new
+    @check = @checkActive.checkProject(@active)
   end
 
   def new

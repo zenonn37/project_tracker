@@ -11,6 +11,9 @@
       
      
          <p class="project_list"><strong>Project Posted: </strong><%=link_to time_ago_in_words(project.created_at) + " ago",project%></p>
+         <%if @check == false%>
+         <p>Project is Active</p>
+         <%end%>
          <p><%=link_to "Edit",edit_project_path(project)%> |
          <%=link_to "Delete",project, method: :delete, data:{ confirm: "Are you sure?"}%></p>
          
