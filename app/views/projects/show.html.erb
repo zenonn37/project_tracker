@@ -5,13 +5,33 @@
 
 <div class="span8">
 
-   <p class="project_list"><strong>Deploy: </strong><%=@project.project_deploy%></p>
-        <p class="project_list"><strong>SDK: </strong><%=@project.project_sdk%></p>
-        <p class="project_list"><strong>Language: </strong><%=@project.project_languages%></p>
-        <p class="project_list"><strong>Frameworks:</strong><%=@project.project_frameworks%></p>
-        <p class="project_list"><strong>Due Date: </strong><%=@project.project_end%></p>
-        <p class="project_list"><strong>Progress: </strong><%=@project.complete%></p>
-        <p class="project_list"><strong>Details: </strong><%=@project.project_details%></p>
+    <table class="table">
+    <tr>
+     <th>Deploy</th>
+     <th>SDK</th>
+     <th>Language</th>
+     <th>Frameworks</th>
+     <th>Due Date</th>
+     <th>Progress</th>
+     <th>Details</th>
+    </tr>
+    <tbody>
+    <tr>
+    <td><%=@project.project_deploy%></td>
+     <td><%=@project.project_sdk%></td>
+      <td><%=@project.project_languages%></td>
+       <td><%=@project.project_frameworks%></td>
+        <td><%=@project.project_end%></td>
+          <td><%=@project.complete%></td>
+            <td><%=@project.project_details%></td>
+
+    </tr>
+    </tbody>
+
+
+    </table>
+
+   
 
         </div>
 
